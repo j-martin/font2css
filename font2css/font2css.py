@@ -7,7 +7,7 @@ with base64 and save the result to a CSS file.
 """
 
 __author__      = "Jean-Martin Archer"
-__copyright__   = "Copyright 2013, Do what you want with it"
+__copyright__   = "Copyright 2013, MIT License."
 
 import base64
 import os
