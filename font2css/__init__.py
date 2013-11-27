@@ -1,10 +1,12 @@
-#!/bin/python
+#!/usr/bin/env python
 
-"""
-Title: Font to CSS
-Creator: Jean-Martin Archer
+"""font2css.py: Embeddeds font files in CSS.
 
-Use: Walk through directories (and sub directories), encode TTF files with base64 and save the result to a CSS file.
+Walks through directories (and sub directories), encode TTF and OTF files
+with base64 and save the result to a CSS file.
 """
+
+__author__      = "Jean-Martin Archer"
+__copyright__   = "Copyright 2013, MIT License."
 
 from font2css import *
