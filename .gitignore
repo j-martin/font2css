@@ -36,4 +36,4 @@ nosetests.xml
 .pydevproject
 
 # Mac
-.DSSTORE
+.DS_Store
