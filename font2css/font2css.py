@@ -12,24 +12,24 @@ __copyright__   = "Copyright 2013, MIT License."
 import base64
 import os
 
-
 def generateFonts(directory, output):
     """
     Main function that generates the css file.
     """
 
+    print('Generating CSS file. \n\n')
+
     file_content = ''
 
     fonts = generateFontList(directory)
 
-    print fonts
-
     for (font, path) in fonts:
+        print('Added %s from %s' % (font, path))
         file_content += generateCSSdata(font, path)
 
     saveCSS(file_content, output)
 
-    print 'Done'
+    print('\n\nDone.\nSee %s.' % output)
 
 
 def generateFontList(directory):
@@ -111,11 +111,11 @@ def saveCSS(data, output_path):
 
 def encodeFile(path):
     data = open(path, 'rb').read()
-    return base64.b64encode(data)
+    return str(base64.b64encode(data))
 
 
 def replace_all(text, dic):
-    for i, j in dic.iteritems():
+    for i, j in dic.items():
         text = text.replace(i, j)
     return text
 
@@ -136,6 +136,6 @@ if __name__ == '__main__':
     if args.output:
         output = args.output
     else:
-        output = './fonts.css'
+        output = './output_fonts.css'
 
     generateFonts(directory, output)
