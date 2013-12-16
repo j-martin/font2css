@@ -12,27 +12,27 @@ from font2css import *
 
 def test_generateFontList():
 
-    directory = 'example'
+    directory = './font2css/example'
 
-    expected = [('OpenSans-Bold', 'example/Open_Sans/OpenSans-Bold.ttf'),
+    expected = [('OpenSans-Bold', './font2css/example/Open_Sans/OpenSans-Bold.ttf'),
                 ('OpenSans-BoldItalic',
-                'example/Open_Sans/OpenSans-BoldItalic.ttf'),
+                './font2css/example/Open_Sans/OpenSans-BoldItalic.ttf'),
                 ('OpenSans-ExtraBold',
-                'example/Open_Sans/OpenSans-ExtraBold.ttf'),
+                './font2css/example/Open_Sans/OpenSans-ExtraBold.ttf'),
                 ('OpenSans-ExtraBoldItalic',
-                 'example/Open_Sans/OpenSans-ExtraBoldItalic.ttf'),
-                ('OpenSans-Italic', 'example/Open_Sans/OpenSans-Italic.ttf'),
-                ('OpenSans-Light', 'example/Open_Sans/OpenSans-Light.ttf'),
+                 './font2css/example/Open_Sans/OpenSans-ExtraBoldItalic.ttf'),
+                ('OpenSans-Italic', './font2css/example/Open_Sans/OpenSans-Italic.ttf'),
+                ('OpenSans-Light', './font2css/example/Open_Sans/OpenSans-Light.ttf'),
                 ('OpenSans-LightItalic',
-                'example/Open_Sans/OpenSans-LightItalic.ttf'),
-                ('OpenSans-Regular', 'example/Open_Sans/OpenSans-Regular.ttf'),
+                './font2css/example/Open_Sans/OpenSans-LightItalic.ttf'),
+                ('OpenSans-Regular', './font2css/example/Open_Sans/OpenSans-Regular.ttf'),
                 ('OpenSans-Semibold',
-                'example/Open_Sans/OpenSans-Semibold.ttf'),
+                './font2css/example/Open_Sans/OpenSans-Semibold.ttf'),
                 ('OpenSans-SemiboldItalic',
-                'example/Open_Sans/OpenSans-SemiboldItalic.ttf'),
-                ('Quicksand-Bold', 'example/Quicksand/Quicksand-Bold.ttf'),
-                ('Quicksand-Light', 'example/Quicksand/Quicksand-Light.ttf'),
-                ('Quicksand-Regular', 'example/Quicksand/Quicksand-Regular.ttf')]
+                './font2css/example/Open_Sans/OpenSans-SemiboldItalic.ttf'),
+                ('Quicksand-Bold', './font2css/example/Quicksand/Quicksand-Bold.ttf'),
+                ('Quicksand-Light', './font2css/example/Quicksand/Quicksand-Light.ttf'),
+                ('Quicksand-Regular', './font2css/example/Quicksand/Quicksand-Regular.ttf')]
 
     results = generateFontList(directory)
 
@@ -65,7 +65,7 @@ def test_replace_all():
 
 def test_generateCSSdata():
 
-    inputs = ('Quicksand-Regular', 'example/Quicksand/Quicksand-Regular.ttf')
+    inputs = ('Quicksand-Regular', './font2css/example/Quicksand/Quicksand-Regular.ttf')
 
     results = generateCSSdata(inputs[0], inputs[1])
     expected = """
