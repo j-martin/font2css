@@ -38,8 +38,6 @@ def test_generateFontList():
 
     results = generateFontList(directory)
 
-    print results
-
     assert(len(results) == len(expected))
 
 
