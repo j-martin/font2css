@@ -12,7 +12,7 @@ from font2css import *
 
 def test_generateFontList():
 
-    directory = './font2css/example'
+    directory = './font2css/example/'
 
     expected = [('OpenSans-Bold', './font2css/example/Open_Sans/OpenSans-Bold.ttf'),
                 ('OpenSans-BoldItalic',
@@ -35,6 +35,8 @@ def test_generateFontList():
                 ('Quicksand-Regular', './font2css/example/Quicksand/Quicksand-Regular.ttf')]
 
     results = generateFontList(directory)
+
+    print results
 
     assert(results == expected)
 
