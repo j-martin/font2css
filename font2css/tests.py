@@ -37,7 +37,6 @@ def test_generateFontList():
         ('Quicksand-Regular', './font2css/example/Quicksand/Quicksand-Regular.ttf')]
 
     results = generateFontList(directory)
-
     assert(len(results) == len(expected))
 
 
